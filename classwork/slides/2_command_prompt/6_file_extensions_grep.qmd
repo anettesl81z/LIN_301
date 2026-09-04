@@ -1,7 +1,7 @@
 ---
 title: "Computation for Linguists"
-subtitle: "Learning the Command Line: File Extensions, Beginning Grep"
-date: "September 2, 2026"
+subtitle: "Learning the Command Line: File Extensions & Grep"
+date: "September 4, 2026"
 author: "Dr. Andrew M. Byrd"
 format:
   revealjs:
@@ -17,51 +17,96 @@ editor: visual
 
 # Review
 
--   What did we learn last time about the Terminal?
+-   What did you learn last time?
 
 ## Review of Terminal Commands
 
--   `mkdir`
+-   `pwd`
 -   `ls`
--   `rmdir`, `rm`
+-   `mkdir`
+-   `rmdir`
 -   `touch`
--   `curl -o file.txt`
+-   `curl -o file.txt url`
+
+## Review of Terminal Commands
+
 -   `cd`
--   `source script.sh`
+-   `mv`
 -   `cat`, `less`
+-   `source`
+-   `echo`
 
-## Review Activity
+## Setting Up
 
-Analyze the following block of code, and describe what happens in each line.
-
-``` bash
-$ pwd
-~/LIN_301/classwork/4_terminal_files_directories
-$ ls
-$ touch test.txt
-$ mkdir folder_1
-$ mv test.txt folder_1
-$ cd folder_1
-$ ls
-$ cd ..
-$ rm -r folder_1
-```
-
-## Review Activity: Pride & Prejudice
-
--   Navigate to your `LIN_301/classwork` folder
--   Create a new folder called `5_file_extensions_grep` and `cd` into it — this is where all of today's work will live
--   Just like last class, copy today's slides into this folder from `301_2026` so you're working from your own copy, not the original:
+-   Using Terminal. VSCode's integrated terminal opens in your `computation_4_linguists` folder, so `cd` into `LIN_301` first:
 
     ``` bash
-    cp ~/301_2026/slides/2_command_prompt/5_file_extensions_grep.qmd .
+    cd LIN_301
+    mkdir -p classwork/day_6
+    cp ../301_2026/slides/2_command_prompt/6_file_extensions_grep.qmd classwork/day_6/
     ```
 
--   Using Terminal:
-    -   create a folder `p_and_p`
-    -   download *Pride and Prejudice* from the following address: <https://gutenberg.org/files/1342/1342-0.txt>
-    -   call this file `p_and_p.txt`
-    -   move `p_and_p.txt` into the folder `p_and_p`
+# Finishing Up Wednesday
+
+## Before We Move On
+
+-   We ran out of time Wednesday before checking everyone's answers to the "On Your Own" activity
+-   Let's finish it now — a few more reps with files/folders and scripting before we start something new
+-   `cd` into `day_5` and load up your `check.sh` script -- run it in Terminal to see if it works!
+
+## On Your Own (Continued from Wednesday)
+
+-   Using only the commands you know — `ls`, `mkdir`, `rmdir`, `touch`, `mv`, `curl`, `rm -r`, and writing/sourcing a `.sh` script
+-   Within your `LIN_301/classwork/day_5` folder:
+    1.  Create a new folder called `day5_files`
+    2.  Move today's slides inside `day5_files`
+    3.  Move `folder_1` inside `day5_files`
+    4.  Write and run a script called `check.sh` that lists everything inside `day5_files` when you `source` it
+
+## Modifying `script.sh` into `check.sh`
+
+-   We wrote it like this — everything between `<<'EOF'` and `EOF` gets saved into the file, line by line:
+
+``` bash
+cat > script.sh <<'EOF'      # write everything below into script.sh, until a line that's just EOF
+#!/bin/bash                 # tells the system to run this file with bash
+echo "This is my first script."                     # print a message
+curl -o term_comm.txt https://winjapati.github.io/courses/301/term_comm.txt  # download the file
+mkdir folder_1                                      # make a new folder
+echo term_comm.txt                                  # print the filename
+mv term_comm.txt folder_1                           # move it into folder_1
+EOF
+```
+
+-   Then we ran it with:
+
+``` bash
+source script.sh
+```
+
+## Reminder: `script.sh` (from Wednesday)
+
+-   Notice the shape of it: each line inside the block is just an ordinary Terminal command, one per line
+-   `check.sh` works exactly the same way — you're not learning any new syntax, just deciding which commands belong inside it
+-   Hint: which command have we used all along to see what's inside a folder?
+
+## How to structure `check.sh`
+
+``` bash
+cd day_5/day5_files
+cat > check.sh <<'EOF'      # write everything below into check.sh, until a line that's just EOF
+#!/bin/bash                 # tells the system to run this file with bash
+ls
+EOF
+```
+
+-   And then:
+
+``` bash
+source check.sh
+cd ../../day_6
+```
+
 
 # File Extensions
 
@@ -76,6 +121,8 @@ When programming, there are lots of different file types:
 -   `xml` - an Extensible Markup Language file; used to store structured data
 -   `md` - a Markdown file (can be converted into `html`); simple way to format text, similar to html
 
+## File Extensions
+
 2)  files you run/execute:
 
 -   `tex` - a LaTeX file; compiled into `pdf`
@@ -85,9 +132,15 @@ When programming, there are lots of different file types:
 ## Installing `pandoc`
 
 -   `pandoc` is a free, open-source tool that converts between document formats — plain text, Markdown, HTML, Word, and more
+
+## Installing `pandoc`
+
 -   To install it:
     -   **Windows**: download the installer from <https://pandoc.org/installing.html>, run it, then close and reopen VSCode
     -   **Mac**: open Terminal and run `brew install pandoc` (requires [Homebrew](https://brew.sh)), or download the installer from the same page
+
+## Installing `pandoc`
+
 -   Confirm it worked:
 
 ``` bash
@@ -101,9 +154,6 @@ pandoc --version
 All of these can be easily converted, as they're all just text!
 
 ``` bash
-# create md file
-touch test.md
-
 # start with a md file
 echo "# Hello World" > test.md
 echo "This is *italic* and **bold**." >> test.md
@@ -194,27 +244,20 @@ ls -lh demo.* from_*.txt
 
 ## The Takeaway?
 
+-   The flattened `.txt` files are tiny compared to `demo.docx`/`demo.odt` — why?
+-   Plain-text formats store only the characters; `.docx`/`.odt` are zipped bundles carrying formatting, styles, and metadata too
+
 # `wc`, `grep`, and piping
 
-## Pride & Prejudice
+## Activity: Downloading Pride & Prejudice
 
--   Earlier you:
-    -   Created a folder called `p_and_p`
-    -   Downloaded *Pride and Prejudice* from the following address: <https://gutenberg.org/files/1342/1342-0.txt>, naming the file `p_and_p.txt`
-    -   And moved `p_and_p.txt` into the folder `p_and_p`
--   Using `cd`, navigate to `LIN_301/classwork/5_file_extensions_grep/p_and_p` and using `ls` confirm that the file is there
-
-## Pride & Prejudice
-
--   Confirm that you indeed have *Pride and Prejudice* downloaded:
-
-``` bash
-less p_and_p.txt
-```
-
--   You can scroll `up` and `down` in the document using the up/down arrows
--   Hit `spacebar` to jump down a page
--   Press `q` to return to the command prompt
+-   Navigate to your `LIN_301/data/` folder
+-   In Terminal:
+    -   create a folder called `gutenberg` and `cd` into it
+    -   download *Pride and Prejudice* from the following address: <https://gutenberg.org/files/1342/1342-0.txt>
+    -   call this file `p_and_p.txt`
+    -   confirm that it downloaded successfully with `ls`
+    -   check the first few lines of the file with `head -n 10 p_and_p.txt`
 
 ## Let's Analyze this Thing
 
@@ -260,7 +303,7 @@ grep "search_string" file_name.txt
 -   Using this syntax, search for all instances of "yes" in *Pride and Prejudice*
 
 ``` bash
-grep "search_string" file_name.txt
+grep "yes" p_and_p.txt
 ```
 
 -   Look at the output in the Terminal -- do you notice anything funny?
@@ -288,8 +331,7 @@ grep "yes" p_and_p.txt | wc
 
 Using the Terminal:
 
--   Navigate back to your `5_file_extensions_grep` folder (e.g., `cd ~/LIN_301/classwork/5_file_extensions_grep`)
--   Create a new folder called `frank`
+-   Navigate back to your `data/gutenberg` folder
 -   Download *Frankenstein* from https://www.gutenberg.org/cache/epub/84/pg84.txt
--   Name the file `frank.txt` and move it to the `frank` folder
+-   Name the file `frank.txt`
 -   Using `grep`, `wc`, and \|, count how many lines have the word `monster` in them

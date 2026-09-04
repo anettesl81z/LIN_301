@@ -15,26 +15,32 @@ format:
 editor: visual
 ---
 
-# Review
+# Setting up Each Day
 
-## Review: So far, you have learned about...
+## Setting Up
 
-- **File structure & dependencies**
+- In VSCode, `Open Folder: computation_4_linguists`
+- There are two repos in this folder, `301_2026` (the shared course repo) and `LIN_301` (your personal repo)
+- In order to edit each day's slides, you'll need to copy them from `301_2026` into your own
 
-  - Setting up VSCode and Git, and why your folders need to be organized consistently
-  - How Git tracks every file in your repo — which only works if you know where things live
+## Setting Up
 
-## Review: So far, you have learned about...
+- You can do this manually, or run the following commands in the terminal, using `bash`. VSCode's integrated terminal opens in your `computation_4_linguists` folder, so `cd` into `LIN_301` first:
 
-- **Commands as instructions**
-  - Git commands (`git commit`, `git push`) are precise instructions with their own syntax
-  - You've already run a few in the terminal without necessarily calling it that
+``` bash
+cd LIN_301
+cp ../301_2026/slides/2_command_prompt/4_terminal_files_directories.qmd ./classwork/4_terminal_files_directories.qmd
+```
 
-## Review: So far, you have learned about...
+- This will allow you to edit the slides in your own repo, without creating a merge conflict
 
-- **Reproducibility & automation**
-  - Git gives you a full history of every change — you can always get back to a working version
-  - This week, the terminal will let you automate the same kind of repetitive file tasks
+## Review Activity
+
+- Make sure that your `301_2026` repo is up-to-date
+
+- Copy the slides into your personal repo, `LIN_301`
+
+# The Command Prompt
 
 ## This week:
 
@@ -51,7 +57,6 @@ editor: visual
 - It's important to understand how the basics work.
   - Where do files live?
   - How do we navigate between them?
-- And the above concepts - file structure & dependencies, commands, and reproducibility - will be present here, too.
 
 # Learning the Terminal
 
@@ -127,18 +132,20 @@ ls
 - Find a directory (dir_name) within it, and type (replacing `dir_name` with the actual directory name):
 
 ``` bash
-cd dir_name        
+cd dir_name
 ```
 
 - This should move you "up" into the directory. Verify this is the case with `ls`.
 
+- Tip: you don't have to type the whole name — after typing the first few letters, press `Tab` to auto-complete it. If there's more than one match, press `Tab` twice to see all the options.
+
 ## Navigating the Terminal
 
 ``` bash
-cd projects           # into a folder
-cd ..                 # up one
+cd folder_name        # into a folder
+cd ..                 # up one level
 cd ~                  # to home
-cd ~/Desktop          # absolute path to Desktop\
+cd ~/Desktop          # absolute path to Desktop - may not work for all
 cd "My Folder"        # if there are any spaces in your named folder
 ```
 
@@ -150,19 +157,11 @@ cd "My Folder"        # if there are any spaces in your named folder
 
 3.  Once there, `cd classwork` — this is where we'll be doing our terminal work for the next three classes
 
-4.  Create a new folder called `4_terminal_files_directories` and `cd` into it — this is where all of today's work will live
-
-5.  Your `301_2026` folder is something you'll `git pull` again later this semester — if you type your own notes or answers directly into the copy that lives there, a future pull could create a merge conflict. So instead, copy today's slides into *this* folder and work from your own copy:
-
-    ``` bash
-    cp ~/301_2026/slides/2_command_prompt/4_terminal_files_directories.qmd .
-    ```
-
 # Making and Renaming Files & Folders
 
 ## `mkdir`
 
-- You should now be in your `LIN_301/classwork/4_terminal_files_directories` folder in the Terminal Prompt
+- You should now be in your `LIN_301/classwork` folder in the Terminal Prompt
 - Look in the Explorer panel (left sidebar) in VSCode, what do you see?
 - Type the following code:
 
@@ -170,7 +169,7 @@ cd "My Folder"        # if there are any spaces in your named folder
 mkdir test_folder     # short for "make directory"
 ```
 
-- Now look in the right corner - did anything change?
+- Now look at the Explorer panel - did anything change?
 
 ## `rmdir`
 
@@ -212,10 +211,12 @@ mv test_bolder test_folder    # how you rename in bash
 
 ## Activity
 
-- Within your `LIN_301/classwork/4_terminal_files_directories` folder:
+- Within your `LIN_301/classwork` folder:
   - Create a file called `activity.txt`
-  - Create the following folders: `folder_1` \> `folder_2` \> `folder_3`
-  - Move `activity.txt` inside `folder_3`
+  - Create the following nested folders: `day_4` \> `folder_1` \> `folder_2` \> `folder_3`
+  - Move today's slide file (`4_terminal_files_directories.qmd`) into `day_4`
+  - Move `activity.txt` into `folder_3`
+  - `cd` into `day_4` — this is where the rest of today's work will live
 - You can *only* use the integrated Terminal in VSCode!
   - Use `pwd` and `ls` as your guide
 
@@ -257,18 +258,16 @@ touch script.sh
 
 ``` bash
 cat > script.sh <<'EOF'      # write everything below into script.sh, until a line that's just EOF
-#!/bin/bash
-# tells the system to run this file with bash
-echo "This is my first script."                                # print a message
+#!/bin/bash                 # tells the system to run this file with bash
+echo "This is my first script."                     # print a message
 curl -o term_comm.txt https://winjapati.github.io/courses/301/term_comm.txt  # download the file
-mkdir folder_1                                                 # make a new folder
-mv term_comm.txt folder_1                                      # move it into folder_1
-echo term_comm.txt                                             # print the filename
+mkdir folder_1                                      # make a new folder
+mv term_comm.txt folder_1                           # move it into folder_1
+echo term_comm.txt                                  # print the filename
 EOF
 ```
 
-- Don't type `EOF` again afterward — it's already in the block above and closes things out on its own. (If you do type it again by accident, you'll just get `bash: EOF: command not found` — harmless, just hit enter and move on.)
-- Look inside `script.sh`, what did you do?
+- Open your folder in VSCode and look inside `script.sh`, what did you do?
 
 ## OMG
 
@@ -302,8 +301,8 @@ less folder_1/term_comm.txt
 ## On Your Own
 
 - Using only what you've learned today — `mkdir`, `rmdir`, `touch`, `mv`, `curl`, `rm -r`, and writing/sourcing a `.sh` script
-- Within your `LIN_301/classwork/4_terminal_files_directories` folder:
+- Within your `LIN_301/classwork/day_4` folder:
   1.  Create a new folder called `day4_files`
-  2.  Move both `test_folder` and `folder_1` inside `day4_files`
+  2.  Move both `folder_1` and `test_folder` inside `day4_files` — `test_folder` is one level up, in `classwork/`, so you'll need `..` to reach it
   3.  Download the Terminal command cheat sheet one more time (<https://winjapati.github.io/courses/301/term_comm.txt>), saving it as `cheatsheet.txt`, directly into `day4_files`
   4.  Write and run a script called `check.sh` that lists everything inside `day4_files` when you `source` it

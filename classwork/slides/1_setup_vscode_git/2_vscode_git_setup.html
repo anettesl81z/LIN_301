@@ -223,7 +223,9 @@ Dr.&nbsp;Andrew M. Byrd
 <li><a href="#/double-checking-git" id="/toc-double-checking-git">Double-Checking Git</a></li>
 <li><a href="#/accessing-the-course-repo" id="/toc-accessing-the-course-repo">Accessing the Course Repo</a></li>
 <li><a href="#/setting-up-your-own-repo" id="/toc-setting-up-your-own-repo">Setting Up Your Own Repo</a></li>
-<li><a href="#/next-time" id="/toc-next-time">Next Time</a></li>
+<li><a href="#/testing-the-whole-pipeline" id="/toc-testing-the-whole-pipeline">Testing the Whole Pipeline</a></li>
+<li><a href="#/activity" id="/toc-activity">Activity</a></li>
+<li><a href="#/wrap-up" id="/toc-wrap-up">Wrap-Up</a></li>
 <li><a href="#/troubleshooting" id="/toc-troubleshooting">Troubleshooting</a></li>
 </ul>
 </nav>
@@ -475,18 +477,112 @@ Dr.&nbsp;Andrew M. Byrd
 <li>When prompted for a location, choose the <strong>same <code>computation_4_linguists</code> folder</strong> you cloned the course repo into — not a new/different one</li>
 <li>Open it when prompted</li>
 </ul>
+</section>
+<section id="one-folder-both-repos" class="slide level2 center">
+<h2>One Folder, Both Repos</h2>
+<pre><code>computation_4_linguists/
+├── 301_2026/      (shared course repo — pull for updates)
+└── LIN_301/       (your repo — where you push your work)</code></pre>
+<ul>
+<li>Open <code>computation_4_linguists</code> in VSCode (<strong>File → Open Folder</strong>) and you’ll see both repos in the Explorer at once</li>
+<li>This is the folder you’ll open every class from now on</li>
+</ul>
 </section></section>
 <section>
-<section id="next-time" class="title-slide slide level1 center">
-<h1>Next Time</h1>
+<section id="testing-the-whole-pipeline" class="title-slide slide level1 center">
+<h1>Testing the Whole Pipeline</h1>
 
 </section>
-<section id="picking-up-from-here" class="slide level2 center">
-<h2>Picking Up From Here</h2>
+<section id="edit-commit-push" class="slide level2 center">
+<h2>Edit, Commit, Push</h2>
+<ol type="1">
+<li>Open <code>README.md</code> in the editor, add a sentence, save (<code>Ctrl+S</code> / <code>Cmd+S</code>)</li>
+<li>Click the <strong>Source Control</strong> icon (branch icon, left sidebar)</li>
+<li>Hover over the changed file, click <strong>+</strong> to stage it</li>
+<li>Type a commit message (e.g.&nbsp;“first commit”)</li>
+<li>Click the checkmark (✓) to commit</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>This Is Crucial!</strong></p>
+</div>
+<div class="callout-content">
+<p>Committing only saves the change <em>locally</em>. You must also click <strong>Sync Changes</strong> (or <strong>… → Push</strong>) to actually send it to GitHub!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="verify-it-worked" class="slide level2 center">
+<h2>Verify It Worked</h2>
 <ul>
-<li>Put both repos side by side in one <code>computation_4_linguists</code> folder</li>
-<li>Test the full edit → commit → push pipeline on your own repo</li>
-<li>Practice a merge conflict on purpose — safely, before it happens by accident</li>
+<li>Go to your repo on github.com</li>
+<li>Refresh the page</li>
+<li>You should see your edited <code>README.md</code> with your new sentence</li>
+</ul>
+</section></section>
+<section>
+<section id="activity" class="title-slide slide level1 center">
+<h1>Activity</h1>
+
+</section>
+<section id="activity-1-add-and-push-a-new-file" class="slide level2 center">
+<h2>Activity 1: Add and Push a New File</h2>
+<ol type="1">
+<li>In your <code>LIN_301</code> repo, create a new file called <code>day2_notes.md</code></li>
+<li>Describe what you’ve done so far in today’s class in this file.</li>
+<li>Save, then check <strong>Source Control</strong> — notice this file is marked differently than <code>README.md</code> was earlier (untracked, not modified)</li>
+<li>Stage → commit → push, same as before</li>
+</ol>
+</section>
+<section id="activity-2-make-and-fix-your-first-merge-conflict" class="slide level2 center">
+<h2>Activity 2: Make (and Fix) Your First Merge Conflict</h2>
+<p>Goal: see a conflict happen on purpose, in a safe spot, before it happens to you by accident.</p>
+<ol type="1">
+<li>On github.com, open your <code>LIN_301</code> repo → click into <code>README.md</code> → click the pencil icon to edit</li>
+<li>Edit the <em>same line</em> you edited earlier today, then commit the change directly on GitHub</li>
+<li>Back in VSCode — <strong>without pulling first</strong> — edit that same line locally, but differently. Save, stage, commit.</li>
+<li>Try to push. What happens?</li>
+<li>Pull. VSCode will report a conflict — open the file and look for the conflict markers: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code></li>
+<li>Decide what the line should actually say, edit the file to remove the markers and leave only the final version, then stage, commit, and push</li>
+<li>Refresh github.com to confirm your resolved version made it up</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>If You Get Stuck</strong></p>
+</div>
+<div class="callout-content">
+<p>Conflicts are the one Git moment that can feel scary the first time. Raise your hand — this is exactly the kind of thing we want to practice together, with a safety net, before it happens on a real assignment.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="wrap-up" class="title-slide slide level1 center">
+<h1>Wrap-Up</h1>
+
+</section>
+<section id="by-the-end-of-today-you-should-be-able-to" class="slide level2 center">
+<h2>By the End of Today, You Should Be Able To…</h2>
+<ul>
+<li>Open VSCode and use the integrated terminal</li>
+<li>Access the shared course repo, and pull new files as they’re added</li>
+<li>Edit, commit, and push changes to your own repo</li>
+<li>Open your <code>computation_4_linguists</code> folder in VSCode and see both repos together</li>
+<li>Recognize a merge conflict and resolve one by hand</li>
+</ul>
+</section>
+<section id="next-time" class="slide level2 center">
+<h2>Next Time</h2>
+<ul>
+<li>How to organize your files &amp; folders in an efficient, effective way</li>
 </ul>
 </section></section>
 <section>
@@ -496,7 +592,9 @@ Dr.&nbsp;Andrew M. Byrd
 </section>
 <section id="if-vscode-asks-for-a-usernamepassword" class="slide level2 center">
 <h2>If VSCode Asks for a Username/Password</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="" aria-label="1"></a><span class="fu">git</span> remote <span class="at">-v</span>   <span class="co"># you'll likely see https://github.com/... git remote set-url origin git@github.com:&lt;YourUser&gt;/&lt;YourRepo&gt;.git git remote -v   # now it should show git@github.com:...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-label="1"></a><span class="fu">git</span> remote <span class="at">-v</span>   <span class="co"># you'll likely see https://github.com/...</span></span>
+<span id="cb17-2"><a href="" aria-label="2"></a><span class="fu">git</span> remote set-url origin git@github.com:<span class="op">&lt;</span>YourUser<span class="op">&gt;</span>/<span class="op">&lt;</span>YourRepo<span class="op">&gt;</span>.git</span>
+<span id="cb17-3"><a href="" aria-label="3"></a><span class="fu">git</span> remote <span class="at">-v</span>   <span class="co"># now it should show git@github.com:...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Try pushing again</li>
 </ul>

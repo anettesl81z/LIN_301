@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="4_terminal_files_directories_files/libs/clipboard/clipboard.min.js"></script>
-<script src="4_terminal_files_directories_files/libs/quarto-html/tabby.min.js"></script>
-<script src="4_terminal_files_directories_files/libs/quarto-html/popper.min.js"></script>
-<script src="4_terminal_files_directories_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="4_terminal_files_directories_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="4_terminal_files_directories_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="4_terminal_files_directories_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="5_file_extensions_grep_files/libs/clipboard/clipboard.min.js"></script>
+<script src="5_file_extensions_grep_files/libs/quarto-html/tabby.min.js"></script>
+<script src="5_file_extensions_grep_files/libs/quarto-html/popper.min.js"></script>
+<script src="5_file_extensions_grep_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="5_file_extensions_grep_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="5_file_extensions_grep_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="5_file_extensions_grep_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Dr.&nbsp;Andrew M. Byrd">
-  <meta name="dcterms.date" content="2026-08-31">
+  <meta name="dcterms.date" content="2026-09-02">
   <title>Computation for Linguists</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="4_terminal_files_directories_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="4_terminal_files_directories_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="5_file_extensions_grep_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="5_file_extensions_grep_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -102,12 +102,12 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="4_terminal_files_directories_files/libs/revealjs/dist/theme/quarto-5c8106c274dac56d8e05e3022a5a12af.css">
+  <link rel="stylesheet" href="5_file_extensions_grep_files/libs/revealjs/dist/theme/quarto-5c8106c274dac56d8e05e3022a5a12af.css">
   <link rel="stylesheet" href="header_shrink.css">
-  <link href="4_terminal_files_directories_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="4_terminal_files_directories_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="4_terminal_files_directories_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="4_terminal_files_directories_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="5_file_extensions_grep_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="5_file_extensions_grep_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="5_file_extensions_grep_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="5_file_extensions_grep_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -202,7 +202,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Computation for Linguists</h1>
-  <p class="subtitle">Learning the Command Line: Files and Directories</p>
+  <p class="subtitle">Learning the Command Line: More Bash Commands; File Extensions</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -212,244 +212,81 @@ Dr.&nbsp;Andrew M. Byrd
 </div>
 </div>
 
-  <p class="date">2026-08-31</p>
+  <p class="date">2026-09-02</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Plan for the Day</h2>
 <ul>
-<li><a href="#/setting-up-each-day" id="/toc-setting-up-each-day">Setting up Each Day</a></li>
-<li><a href="#/the-command-prompt" id="/toc-the-command-prompt">The Command Prompt</a></li>
-<li><a href="#/learning-the-terminal" id="/toc-learning-the-terminal">Learning the Terminal</a></li>
-<li><a href="#/making-and-renaming-files-folders" id="/toc-making-and-renaming-files-folders">Making and Renaming Files &amp; Folders</a></li>
+<li><a href="#/schedule-modified" id="/toc-schedule-modified">Schedule Modified</a></li>
+<li><a href="#/review" id="/toc-review">Review</a></li>
 <li><a href="#/a-couple-more-tricks" id="/toc-a-couple-more-tricks">A Couple More Tricks</a></li>
-<li><a href="#/bonus-activity-if-theres-time" id="/toc-bonus-activity-if-theres-time">Bonus Activity (If There’s Time)</a></li>
+<li><a href="#/file-extensions" id="/toc-file-extensions">File Extensions</a></li>
 </ul>
 </nav>
 </section>
 <section>
-<section id="setting-up-each-day" class="title-slide slide level1 center">
-<h1>Setting up Each Day</h1>
+<section id="schedule-modified" class="title-slide slide level1 center">
+<h1>Schedule Modified</h1>
 
 </section>
-<section id="setting-up" class="slide level2 center">
-<h2>Setting Up</h2>
+<section id="command-prompt-homework" class="slide level2 center">
+<h2>Command Prompt, Homework</h2>
 <ul>
-<li>In VSCode, <code>Open Folder: computation_4_linguists</code></li>
-<li>There are two repos in this folder, <code>301_2026</code> (the shared course repo) and <code>LIN_301</code> (your personal repo)</li>
-<li>In order to edit each day’s slides, you’ll need to copy them from <code>301_2026</code> into your own</li>
+<li>Let’s look at Canvas</li>
+</ul>
+</section></section>
+<section>
+<section id="review" class="title-slide slide level1 center">
+<h1>Review</h1>
+<ul>
+<li>What did we learn last time about the Terminal?</li>
 </ul>
 </section>
-<section id="setting-up-1" class="slide level2 center">
-<h2>Setting Up</h2>
+<section id="review-of-terminal-commands" class="slide level2 center">
+<h2>Review of Terminal Commands</h2>
 <ul>
-<li>You can do this manually, or run the following commands in the terminal, using <code>bash</code>. VSCode’s integrated terminal opens in your <code>computation_4_linguists</code> folder, so <code>cd</code> into <code>LIN_301</code> first:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-label="1"></a><span class="bu">cd</span> LIN_301</span>
-<span id="cb1-2"><a href="" aria-label="2"></a><span class="fu">cp</span> ../301_2026/slides/2_command_prompt/4_terminal_files_directories.qmd ./classwork/4_terminal_files_directories.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This will allow you to edit the slides in your own repo, without creating a merge conflict</li>
+<li><code>pwd</code></li>
+<li><code>ls</code></li>
+<li><code>mkdir</code></li>
+<li><code>rmdir</code></li>
+<li><code>touch</code></li>
+<li><code>curl -o file.txt</code></li>
+<li><code>cd</code></li>
 </ul>
 </section>
 <section id="review-activity" class="slide level2 center">
 <h2>Review Activity</h2>
-<ul>
-<li><p>Make sure that your <code>301_2026</code> repo is up-to-date</p></li>
-<li><p>Copy the slides into your personal repo, <code>LIN_301</code></p></li>
-</ul>
-</section></section>
-<section>
-<section id="the-command-prompt" class="title-slide slide level1 center">
-<h1>The Command Prompt</h1>
-
+<p>Analyze the following block of code, and describe what happens in each line.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-label="1"></a><span class="ex">$</span> pwd</span>
+<span id="cb1-2"><a href="" aria-label="2"></a><span class="ex">~/LIN_301/classwork/day_4</span></span>
+<span id="cb1-3"><a href="" aria-label="3"></a><span class="ex">$</span> ls</span>
+<span id="cb1-4"><a href="" aria-label="4"></a><span class="ex">$</span> touch test.txt</span>
+<span id="cb1-5"><a href="" aria-label="5"></a><span class="ex">$</span> mkdir folder_1</span>
+<span id="cb1-6"><a href="" aria-label="6"></a><span class="ex">$</span> mv test.txt folder_1</span>
+<span id="cb1-7"><a href="" aria-label="7"></a><span class="ex">$</span> cd folder_1</span>
+<span id="cb1-8"><a href="" aria-label="8"></a><span class="ex">$</span> ls</span>
+<span id="cb1-9"><a href="" aria-label="9"></a><span class="ex">$</span> cd ..</span>
+<span id="cb1-10"><a href="" aria-label="10"></a><span class="ex">$</span> rm <span class="at">-r</span> folder_1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="this-week" class="slide level2 center">
-<h2>This week:</h2>
-
-<img data-src="4_powershell.png" alt="An Picture of Windows &quot;Powershell&quot;, a Unix-style Terminal" class="r-stretch"></section>
-<section id="you-may-be-thinking" class="slide level2 center">
-<h2>You may be thinking:</h2>
+<section id="setting-up-for-today" class="slide level2 center">
+<h2>Setting Up for Today</h2>
 <ul>
-<li>Nooooooooooooooooooooooooooooo!</li>
-<li>I’m still scarred from installing GitHub.</li>
-<li>Please let’s not go back there.</li>
+<li><p>Using <code>bash</code> commands. VSCode’s integrated terminal opens in your <code>computation_4_linguists</code> folder, so <code>cd</code> into <code>LIN_301</code> first:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-label="1"></a><span class="bu">cd</span> LIN_301</span>
+<span id="cb2-2"><a href="" aria-label="2"></a><span class="fu">mkdir</span> <span class="at">-p</span> classwork/day_5</span>
+<span id="cb2-3"><a href="" aria-label="3"></a><span class="fu">cp</span> ../301_2026/slides/2_command_prompt/5_file_extensions_grep.qmd classwork/day_5/</span>
+<span id="cb2-4"><a href="" aria-label="4"></a><span class="bu">cd</span> classwork/day_5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Open the <code>.qmd</code> file in VSCode</p></li>
 </ul>
-</section>
-<section id="but" class="slide level2 center">
-<h2>But:</h2>
-<ul>
-<li>It’s important to understand how the basics work.
-<ul>
-<li>Where do files live?</li>
-<li>How do we navigate between them?</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="learning-the-terminal" class="title-slide slide level1 center">
-<h1>Learning the Terminal</h1>
-
-</section>
-<section id="why-start-in-the-terminal" class="slide level2 center">
-<h2>Why start in the terminal?</h2>
-<ul>
-<li>Python always runs <strong>inside a folder</strong> (your working directory).</li>
-<li>If you can move, list, and fetch files here, this will make it easier to understand how to access files in Python later.</li>
-<li>Same skills for Git and other computational environments, like:
-<ul>
-<li>servers and clients</li>
-<li>clusters (computers set up to work together)</li>
-</ul></li>
-</ul>
-</section>
-<section id="why-start-in-the-terminal-1" class="slide level2 center">
-<h2>Why start in the terminal?</h2>
-<ul>
-<li>Also:
-<ul>
-<li>While this isn’t the case for me, I’ve been assured by various linguists that understanding how the Terminal works is crucial for conducting certain types of research, particularly in Phonetics</li>
-</ul></li>
-</ul>
-</section>
-<section id="navigating-the-terminal" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<ul>
-<li>We’ll be working within the integrated <code>Terminal</code> in VSCode (View → Terminal)</li>
-<li>Make sure you’re running <strong>Bash</strong>, not PowerShell or Command Prompt:
-<ul>
-<li>Open a terminal (View → Terminal)</li>
-<li>Click the small dropdown arrow (˅) next to the <strong>+</strong> in the top-right of the terminal panel</li>
-<li>Select <strong>Git Bash</strong> from the list (it may just be labeled <strong>bash</strong>)</li>
-</ul></li>
-</ul>
-</section>
-<section id="navigating-the-terminal-1" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<ul>
-<li>Let’s start with the first command</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-label="1"></a><span class="bu">pwd</span>         <span class="co"># short for "print working directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>What is this “#” notation?</li>
-</ul>
-</section>
-<section id="navigating-the-terminal-2" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<ul>
-<li>You can also look to see what’s in the current directory</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-label="1"></a><span class="fu">ls</span>           <span class="co"># short for "listing files"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="navigating-the-terminal-3" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<ul>
-<li>Most commands have <strong>options</strong></li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-label="1"></a><span class="fu">ls</span> <span class="at">-l</span>        <span class="co"># details (permissions, size, dates)</span></span>
-<span id="cb4-2"><a href="" aria-label="2"></a><span class="fu">ls</span> <span class="at">-a</span>        <span class="co"># include hidden files (like .git)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="navigating-the-terminal-4" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-label="1"></a><span class="bu">cd</span>          <span class="co"># short for "change directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>You need to specify which directory to change into</li>
-<li>For now, use:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="" aria-label="1"></a><span class="bu">cd</span> ~         </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="navigating-the-terminal-5" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<ul>
-<li>Type:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-label="1"></a><span class="fu">ls</span>        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Find a directory (dir_name) within it, and type (replacing <code>dir_name</code> with the actual directory name):</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-label="1"></a><span class="bu">cd</span> dir_name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><p>This should move you “up” into the directory. Verify this is the case with <code>ls</code>.</p></li>
-<li><p>Tip: you don’t have to type the whole name — after typing the first few letters, press <code>Tab</code> to auto-complete it. If there’s more than one match, press <code>Tab</code> twice to see all the options.</p></li>
-</ul>
-</section>
-<section id="navigating-the-terminal-6" class="slide level2 center">
-<h2>Navigating the Terminal</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-label="1"></a><span class="bu">cd</span> folder_name        <span class="co"># into a folder</span></span>
-<span id="cb9-2"><a href="" aria-label="2"></a><span class="bu">cd</span> ..                 <span class="co"># up one level</span></span>
-<span id="cb9-3"><a href="" aria-label="3"></a><span class="bu">cd</span> ~                  <span class="co"># to home</span></span>
-<span id="cb9-4"><a href="" aria-label="4"></a><span class="bu">cd</span> ~/Desktop          <span class="co"># absolute path to Desktop - may not work for all</span></span>
-<span id="cb9-5"><a href="" aria-label="5"></a><span class="bu">cd</span> <span class="st">"My Folder"</span>        <span class="co"># if there are any spaces in your named folder</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="activity" class="slide level2 center">
 <h2>Activity</h2>
-<ol type="1">
-<li><p>Type <code>cd ~</code>, to bring you to your home directory</p></li>
-<li><p>Using <code>pwd</code> and <code>ls</code> as your guide, navigate your way into your <code>LIN_301</code> folder</p></li>
-<li><p>Once there, <code>cd classwork</code> — this is where we’ll be doing our terminal work for the next three classes</p></li>
-</ol>
-</section></section>
-<section>
-<section id="making-and-renaming-files-folders" class="title-slide slide level1 center">
-<h1>Making and Renaming Files &amp; Folders</h1>
-
-</section>
-<section id="mkdir" class="slide level2 center">
-<h2><code>mkdir</code></h2>
 <ul>
-<li>You should now be in your <code>LIN_301/classwork</code> folder in the Terminal Prompt</li>
-<li>Look in the Explorer panel (left sidebar) in VSCode, what do you see?</li>
-<li>Type the following code:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="" aria-label="1"></a><span class="fu">mkdir</span> test_folder     <span class="co"># short for "make directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Now look at the Explorer panel - did anything change?</li>
-</ul>
-</section>
-<section id="rmdir" class="slide level2 center">
-<h2><code>rmdir</code></h2>
-<ul>
-<li>Now type the following code</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="" aria-label="1"></a><span class="fu">rmdir</span> test_folder    <span class="co"># short for "remove directory"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Look in the Explorer panel in VSCode - did anything change?</li>
-</ul>
-</section>
-<section id="touch" class="slide level2 center">
-<h2><code>touch</code></h2>
-<ul>
-<li>Now type the following code:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-label="1"></a><span class="fu">mkdir</span> test_bolder</span>
-<span id="cb12-2"><a href="" aria-label="2"></a><span class="fu">touch</span> test_doc.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Look in the Explorer panel in VSCode - did anything change?</li>
-<li>What does <code>touch</code> do?</li>
-</ul>
-</section>
-<section id="mv" class="slide level2 center">
-<h2><code>mv</code></h2>
-<ul>
-<li>We want to place our new <code>txt</code> file in the folder, so let’s run this code:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="" aria-label="1"></a><span class="fu">mv</span> test_doc.txt test_bolder/    <span class="co"># short for "move"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="mv-1" class="slide level2 center">
-<h2><code>mv</code></h2>
-<ul>
-<li>Ah crap, I misspelled <code>test_bolder</code>, let’s run this code:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-label="1"></a><span class="fu">mv</span> test_bolder test_folder    <span class="co"># how you rename in bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="activity-1" class="slide level2 center">
-<h2>Activity</h2>
-<ul>
-<li>Within your <code>LIN_301/classwork</code> folder:
+<li>Within your <code>LIN_301/classwork/day_5</code> folder:
 <ul>
 <li>Create a file called <code>activity.txt</code></li>
-<li>Create the following nested folders: <code>day_4</code> &gt; <code>folder_1</code> &gt; <code>folder_2</code> &gt; <code>folder_3</code></li>
-<li>Move today’s slide file (<code>4_terminal_files_directories.qmd</code>) into <code>day_4</code></li>
+<li>Create the following nested folders: <code>folder_1</code> &gt; <code>folder_2</code> &gt; <code>folder_3</code></li>
 <li>Move <code>activity.txt</code> into <code>folder_3</code></li>
-<li><code>cd</code> into <code>day_4</code> — this is where the rest of today’s work will live</li>
 </ul></li>
 <li>You can <em>only</em> use the integrated Terminal in VSCode!
 <ul>
@@ -462,24 +299,12 @@ Dr.&nbsp;Andrew M. Byrd
 <h1>A Couple More Tricks</h1>
 
 </section>
-<section id="curl" class="slide level2 center">
-<h2><code>curl</code></h2>
-<ul>
-<li>We all know how to download things from the Internet, but what about using the Terminal?</li>
-<li>Type this code:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="" aria-label="1"></a><span class="ex">curl</span> <span class="at">-o</span> term_comm.txt https://winjapati.github.io/courses/301/term_comm.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>This is a useful list of Terminal commands</li>
-<li>Move this file into <code>folder_1</code></li>
-</ul>
-</section>
 <section id="rm--r" class="slide level2 center">
 <h2><code>rm -r</code></h2>
 <ul>
 <li>Let’s learn one more bash command</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="" aria-label="1"></a><span class="fu">rm</span> <span class="at">-r</span> folder_1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-label="1"></a><span class="fu">rm</span> <span class="at">-r</span> folder_1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>What happens?</li>
 </ul>
@@ -489,21 +314,21 @@ Dr.&nbsp;Andrew M. Byrd
 <ul>
 <li>Don’t worry! Type the following code:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-label="1"></a><span class="fu">touch</span> script.sh </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-label="1"></a><span class="fu">touch</span> script.sh </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="bringing-it-back" class="slide level2 center">
 <h2>Bringing it Back</h2>
 <ul>
 <li>Copy and paste this <strong>whole block</strong> (using right click) into the Terminal — it already ends with <code>EOF</code>, so one paste does the whole thing:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="" aria-label="1"></a><span class="fu">cat</span> <span class="op">&gt;</span> script.sh <span class="op">&lt;&lt;'EOF'</span>      <span class="st"># write everything below into script.sh, until a line that's just EOF</span></span>
-<span id="cb18-2"><a href="" aria-label="2"></a><span class="st">#!/bin/bash                 # tells the system to run this file with bash</span></span>
-<span id="cb18-3"><a href="" aria-label="3"></a><span class="st">echo "This is my first script."                     # print a message</span></span>
-<span id="cb18-4"><a href="" aria-label="4"></a><span class="st">curl -o term_comm.txt https://winjapati.github.io/courses/301/term_comm.txt  # download the file</span></span>
-<span id="cb18-5"><a href="" aria-label="5"></a><span class="st">mkdir folder_1                                      # make a new folder</span></span>
-<span id="cb18-6"><a href="" aria-label="6"></a><span class="st">mv term_comm.txt folder_1                           # move it into folder_1</span></span>
-<span id="cb18-7"><a href="" aria-label="7"></a><span class="st">echo term_comm.txt                                  # print the filename</span></span>
-<span id="cb18-8"><a href="" aria-label="8"></a><span class="op">EOF</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-label="1"></a><span class="fu">cat</span> <span class="op">&gt;</span> script.sh <span class="op">&lt;&lt;'EOF'</span>      <span class="st"># write everything below into script.sh, until a line that's just EOF</span></span>
+<span id="cb5-2"><a href="" aria-label="2"></a><span class="st">#!/bin/bash                 # tells the system to run this file with bash</span></span>
+<span id="cb5-3"><a href="" aria-label="3"></a><span class="st">echo "This is my first script."                     # print a message</span></span>
+<span id="cb5-4"><a href="" aria-label="4"></a><span class="st">curl -o term_comm.txt https://winjapati.github.io/courses/301/term_comm.txt  # download the file</span></span>
+<span id="cb5-5"><a href="" aria-label="5"></a><span class="st">mkdir folder_1                                      # make a new folder</span></span>
+<span id="cb5-6"><a href="" aria-label="6"></a><span class="st">echo term_comm.txt                                  # print the filename</span></span>
+<span id="cb5-7"><a href="" aria-label="7"></a><span class="st">mv term_comm.txt folder_1                           # move it into folder_1</span></span>
+<span id="cb5-8"><a href="" aria-label="8"></a><span class="op">EOF</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Open your folder in VSCode and look inside <code>script.sh</code>, what did you do?</li>
 </ul>
@@ -513,7 +338,7 @@ Dr.&nbsp;Andrew M. Byrd
 <ul>
 <li>Type:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="" aria-label="1"></a><span class="bu">source</span> script.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="" aria-label="1"></a><span class="bu">source</span> script.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cat" class="slide level2 center">
 <h2><code>cat</code></h2>
@@ -521,35 +346,168 @@ Dr.&nbsp;Andrew M. Byrd
 <li>You’ve now got <code>script.sh</code>, and (thanks to the script) <code>folder_1/term_comm.txt</code> — let’s actually look inside them</li>
 <li><code>cat</code> prints a file’s entire contents to the screen at once — best for short files</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="" aria-label="1"></a><span class="fu">cat</span> script.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-label="1"></a><span class="fu">cat</span> script.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="less" class="slide level2 center">
 <h2><code>less</code></h2>
 <ul>
 <li>For longer files, dumping everything with <code>cat</code> gets hard to read — <code>less</code> opens it as a scrollable page instead</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="" aria-label="1"></a><span class="fu">less</span> folder_1/term_comm.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-label="1"></a><span class="fu">less</span> folder_1/term_comm.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Use the up/down arrows to scroll, spacebar to jump down a page, and <code>q</code> to quit back to the prompt</li>
 </ul>
-</section></section>
-<section>
-<section id="bonus-activity-if-theres-time" class="title-slide slide level1 center">
-<h1>Bonus Activity (If There’s Time)</h1>
-
 </section>
 <section id="on-your-own" class="slide level2 center">
 <h2>On Your Own</h2>
 <ul>
-<li>Using only what you’ve learned today — <code>mkdir</code>, <code>rmdir</code>, <code>touch</code>, <code>mv</code>, <code>curl</code>, <code>rm -r</code>, and writing/sourcing a <code>.sh</code> script</li>
-<li>Within your <code>LIN_301/classwork/day_4</code> folder:
+<li>Using only the commands you know — <code>ls</code>, <code>mkdir</code>, <code>rmdir</code>, <code>touch</code>, <code>mv</code>, <code>curl</code>, <code>rm -r</code>, and writing/sourcing a <code>.sh</code> script</li>
+<li>Within your <code>LIN_301/classwork/day_5</code> folder:
 <ol type="1">
-<li>Create a new folder called <code>day4_files</code></li>
-<li>Move both <code>folder_1</code> and <code>test_folder</code> inside <code>day4_files</code> — <code>test_folder</code> is one level up, in <code>classwork/</code>, so you’ll need <code>..</code> to reach it</li>
-<li>Download the Terminal command cheat sheet one more time (<a href="https://winjapati.github.io/courses/301/term_comm.txt" class="uri">https://winjapati.github.io/courses/301/term_comm.txt</a>), saving it as <code>cheatsheet.txt</code>, directly into <code>day4_files</code></li>
-<li>Write and run a script called <code>check.sh</code> that lists everything inside <code>day4_files</code> when you <code>source</code> it</li>
+<li>Create a new folder called <code>day5_files</code></li>
+<li>Move today’s slides inside <code>day5_files</code></li>
+<li>Move <code>folder_1</code> inside <code>day5_files</code></li>
+<li>Write and run a script called <code>check.sh</code> that lists everything inside <code>day5_files</code> when you <code>source</code> it</li>
 </ol></li>
 </ul>
+</section></section>
+<section>
+<section id="file-extensions" class="title-slide slide level1 center">
+<h1>File Extensions</h1>
+
+</section>
+<section id="file-extensions-1" class="slide level2 center">
+<h2>File Extensions</h2>
+<p>When programming, there are lots of different file types:</p>
+<ol type="1">
+<li>files to store data in:</li>
+</ol>
+<ul>
+<li><code>txt</code> - a (raw) text file</li>
+<li><code>html</code> - an html file, to be viewed in a web browser</li>
+<li><code>xml</code> - an Extensible Markup Language file; used to store structured data</li>
+<li><code>md</code> - a Markdown file (can be converted into <code>html</code>); simple way to format text, similar to html</li>
+</ul>
+</section>
+<section id="file-extensions-2" class="slide level2 center">
+<h2>File Extensions</h2>
+<ol start="2" type="1">
+<li>files you run/execute:</li>
+</ol>
+<ul>
+<li><code>tex</code> - a LaTeX file; compiled into <code>pdf</code></li>
+<li><code>py</code> - a Python script; run by a Python interpreter</li>
+<li><code>r</code> - an R script; run by an R interpreter</li>
+</ul>
+</section>
+<section id="installing-pandoc" class="slide level2 center">
+<h2>Installing <code>pandoc</code></h2>
+<ul>
+<li><code>pandoc</code> is a free, open-source tool that converts between document formats — plain text, Markdown, HTML, Word, and more</li>
+</ul>
+</section>
+<section id="installing-pandoc-1" class="slide level2 center">
+<h2>Installing <code>pandoc</code></h2>
+<ul>
+<li>To install it:
+<ul>
+<li><strong>Windows</strong>: download the installer from <a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a>, run it, then close and reopen VSCode</li>
+<li><strong>Mac</strong>: open Terminal and run <code>brew install pandoc</code> (requires <a href="https://brew.sh">Homebrew</a>), or download the installer from the same page</li>
+</ul></li>
+</ul>
+</section>
+<section id="installing-pandoc-2" class="slide level2 center">
+<h2>Installing <code>pandoc</code></h2>
+<ul>
+<li>Confirm it worked:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-label="1"></a><span class="ex">pandoc</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Don’t want to install it right now? No problem — you can just follow along as we go</li>
+</ul>
+</section>
+<section id="converting-files" class="slide level2 center">
+<h2>Converting Files</h2>
+<p>All of these can be easily converted, as they’re all just text!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="" aria-label="1"></a><span class="co"># start with a md file</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a><span class="bu">echo</span> <span class="st">"# Hello World"</span> <span class="op">&gt;</span> test.md</span>
+<span id="cb10-3"><a href="" aria-label="3"></a><span class="bu">echo</span> <span class="st">"This is *italic* and **bold**."</span> <span class="op">&gt;&gt;</span> test.md</span>
+<span id="cb10-4"><a href="" aria-label="4"></a></span>
+<span id="cb10-5"><a href="" aria-label="5"></a><span class="co"># convert markdown → html</span></span>
+<span id="cb10-6"><a href="" aria-label="6"></a><span class="ex">pandoc</span> test.md <span class="at">-o</span> test.html</span>
+<span id="cb10-7"><a href="" aria-label="7"></a></span>
+<span id="cb10-8"><a href="" aria-label="8"></a><span class="co"># convert html → plain text</span></span>
+<span id="cb10-9"><a href="" aria-label="9"></a><span class="ex">pandoc</span> test.html <span class="at">-t</span> plain <span class="at">-o</span> test.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="converting-to-docx-and-odt" class="slide level2 center">
+<h2>Converting to <code>docx</code> and <code>odt</code></h2>
+<ul>
+<li>Let’s create a <code>.sh</code> file called <code>convert.sh</code></li>
+<li>We’ll paste in this code:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="" aria-label="1"></a><span class="co"># 1) Make a tiny Markdown source</span></span>
+<span id="cb11-2"><a href="" aria-label="2"></a><span class="bu">echo</span> <span class="st">"# Hello!"</span> <span class="op">&gt;</span> demo.md</span>
+<span id="cb11-3"><a href="" aria-label="3"></a><span class="bu">echo</span> <span class="st">"This is a *line* and **text**."</span> <span class="op">&gt;&gt;</span> demo.md</span>
+<span id="cb11-4"><a href="" aria-label="4"></a></span>
+<span id="cb11-5"><a href="" aria-label="5"></a><span class="co"># 2) Convert MD → HTML</span></span>
+<span id="cb11-6"><a href="" aria-label="6"></a><span class="ex">pandoc</span> demo.md <span class="at">-o</span> demo.html</span>
+<span id="cb11-7"><a href="" aria-label="7"></a></span>
+<span id="cb11-8"><a href="" aria-label="8"></a><span class="co"># 3) Convert MD → DOCX and → ODT</span></span>
+<span id="cb11-9"><a href="" aria-label="9"></a><span class="ex">pandoc</span> demo.md <span class="at">-o</span> demo.docx</span>
+<span id="cb11-10"><a href="" aria-label="10"></a><span class="ex">pandoc</span> demo.md <span class="at">-o</span> demo.odt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Run the code:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-label="1"></a><span class="bu">source</span> convert.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="identifying-whats-inside-file" class="slide level2 center">
+<h2>Identifying What’s Inside: <code>file</code></h2>
+<ul>
+<li>Let’s see what the Terminal thinks is inside these files:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="" aria-label="1"></a><span class="fu">file</span> demo.html demo.docx demo.odt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="what-are-these-things" class="slide level2 center">
+<h2>What are these things?</h2>
+<ul>
+<li>Let’s use a command <code>head</code>, to print out what’s inside the file itself.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-label="1"></a><span class="fu">head</span> <span class="at">-n</span> 20 demo.md</span>
+<span id="cb14-2"><a href="" aria-label="2"></a><span class="fu">head</span> <span class="at">-n</span> 20 demo.html</span>
+<span id="cb14-3"><a href="" aria-label="3"></a><span class="fu">head</span> <span class="at">-n</span> 20 demo.odt</span>
+<span id="cb14-4"><a href="" aria-label="4"></a><span class="fu">head</span> <span class="at">-n</span> 20 demo.docx</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="what-are-these-things-1" class="slide level2 center">
+<h2>What are these things?</h2>
+<ul>
+<li>Word &amp; Google Docs aren’t text formats at all, they’re zip files!</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="" aria-label="1"></a><span class="fu">unzip</span> <span class="at">-l</span> demo.docx <span class="kw">|</span> <span class="fu">head</span></span>
+<span id="cb15-2"><a href="" aria-label="2"></a><span class="fu">unzip</span> <span class="at">-l</span> demo.odt  <span class="kw">|</span> <span class="fu">head</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Contrast that with:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="" aria-label="1"></a><span class="fu">unzip</span> <span class="at">-l</span> demo.md <span class="kw">|</span> <span class="fu">head</span></span>
+<span id="cb16-2"><a href="" aria-label="2"></a><span class="fu">unzip</span> <span class="at">-l</span> demo.html <span class="kw">|</span> <span class="fu">head</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="flattening-files" class="slide level2 center">
+<h2>Flattening Files</h2>
+<ul>
+<li>We can use Pandoc to flatten all three to plain text:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-label="1"></a><span class="ex">pandoc</span> demo.html <span class="at">-t</span> plain <span class="at">-o</span> from_html.txt</span>
+<span id="cb17-2"><a href="" aria-label="2"></a><span class="ex">pandoc</span> demo.docx <span class="at">-t</span> plain <span class="at">-o</span> from_docx.txt</span>
+<span id="cb17-3"><a href="" aria-label="3"></a><span class="ex">pandoc</span> demo.odt  <span class="at">-t</span> plain <span class="at">-o</span> from_odt.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="file-extensions-3" class="slide level2 center">
+<h2>File Extensions</h2>
+<ul>
+<li>How much data does each file type take up?</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="" aria-label="1"></a><span class="fu">ls</span> <span class="at">-lh</span> demo.<span class="pp">*</span> from_<span class="pp">*</span>.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-takeaway" class="slide level2 center">
+<h2>The Takeaway?</h2>
 
 </section></section>
     </div>
@@ -560,19 +518,19 @@ Dr.&nbsp;Andrew M. Byrd
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="4_terminal_files_directories_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="5_file_extensions_grep_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
