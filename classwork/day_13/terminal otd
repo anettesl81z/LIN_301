@@ -1,0 +1,118 @@
+>>> orwell_novels = ["Animal Farm", "Nineteen Eighty-Four", "Burmese Days"]
+>>> 
+>>> orwell_novels[0]           # first item
+'Animal Farm'
+>>> orwell_novels[-1]          # last item
+'Burmese Days'
+>>> orwell_novels[0:2]         # slice
+['Animal Farm', 'Nineteen Eighty-Four']
+>>> "Animal Farm" in orwell_novels
+True
+>>> novel_dict = {"Sense and Sensibility": 1811,
+...               "Pride and Prejudice": 1813,
+...               "Mansfield Park": 1814}
+
+*** lecture practice / activities ***
+>>> austen_dict = {
+...     "Sense and Sensibility": 1811,
+...     "Pride and Prejudice": 1813,
+...     "Mansfield Park": 1814,
+...     "Emma": 1815,
+...     "Northanger Abbey": 1818,   # duplicate value
+...     "Persuasion": 1818,         # duplicate value
+...     "Lady Susan": 1871
+... }
+>>> austen_dict["Pride and Prejudice"]
+1813
+>>> austen_dict["The Rise of Han Solo"] = 2026
+>>> austen_dict["The Rise of Han Solo"] = 1872
+>>> del austen_dict["The Rise of Han Solo"]
+>>> austen_dict
+{'Sense and Sensibility': 1811, 'Pride and Prejudice': 1813, 'Mansfield Park': 1814, 'Emma': 1815, 'Northanger Abbey': 1818, 'Persuasion': 1818, 'Lady Susan': 1871}
+
+
+
+
+
+>>> orwell_dict = {
+...     "Animal Farm": 1945,
+...     "Nineteen Eighty-Four": 1949,
+...     "Burmese Days": 1934,
+...     "Keep the Aspidistra Flying": 1936,
+...     "Coming Up for Air": 1939
+... }
+>>> orwell_dict["Animal Farm"]
+1945
+>>> or
+or            ord(          original_ps1  orwell_dict   orwell_novels
+>>> or
+or            ord(          original_ps1  orwell_dict   orwell_novels
+                  
+>>> orwell_dict
+{'Animal Farm': 1945, 'Nineteen Eighty-Four': 1949, 'Burmese Days': 1934, 'Keep the Aspidistra Flying': 1936, 'Coming Up for Air': 1939}
+
+>>> orwell_dict["Homage to Catalonia"] = 1937
+>>> orwell_dict
+{'Animal Farm': 1945, 'Nineteen Eighty-Four': 1949, 'Burmese Days': 1934, 'Keep the Aspidistra Flying': 1936, 'Coming Up for Air': 1939, 'Homage to Catalonia': 1937}
+>>> orwell_dict["Homage to Catalonia"] = 1938
+
+>>> orwell_dict["Coming Up for Air"]
+1939
+>>> del orwell_dict["Coming Up for Air"]
+
+>>> orwell_dict
+{'Animal Farm': 1945, 'Nineteen Eighty-Four': 1949, 'Burmese Days': 1934, 'Keep the Aspidistra Flying': 1936, 'Homage to Catalonia': 1938}
+
+
+
+
+*** last in-lecture activity *** # dictionary way
+
+
+>>> languages = ["Hittite", "Sanskrit", "Latin", "Gothic", "Tocharian"]
+>>> dates = [-1650, -1200, -700, 350, 600]
+
+>>> languages.index("Latin")
+2
+
+>>> attested_dict = {"Hittite" : -1650, "Sanskrit": -1200, "Latin": -700, "Gothic": 350, "Tocharian": 600}
+
+>>> attested_dict["Latin"]
+-700
+
+>>> "Old Irish" in attested_dict
+False
+
+>>> attested_dict = {"Old Irish": 700}
+
+>>> attested_dict
+{'Old Irish': 700} # oops deleted the other entries
+
+>>> attested_dict = {"Hittite" : -1650, "Sanskrit": -1200, "Latin": -700, "Gothic": 350, "Tocharian": 600, "Old Irish": 700}
+
+>>> attested_dict                                                                
+{'Hittite': -1650, 'Sanskrit': -1200, 'Latin': -700, 'Gothic': 350, 'Tocharian': 600, 'Old Irish': 700}
+
+
+>>> del attested_dict["Tocharian"]
+
+>>> attested_dict
+{'Hittite': -1650, 'Sanskrit': -1200, 'Latin': -700, 'Gothic': 350, 'Old Irish': 700}
+
+>>> print(languages, dates)
+[-1650, -1200, -700, 350, 600] [-1650, -1200, -700, 350, 600]
+
+*** list way ***
+
+>>> languages = ["Hittite", "Sanskrit", "Latin", "Gothic", "Tocharian"]
+>>> dates = [-1650, -1200, -700, 350, 600]
+>>> print(languages, dates)
+['Hittite', 'Sanskrit', 'Latin', 'Gothic', 'Tocharian'] [-1650, -1200, -700, 350, 600]
+>>> lat_index = languages.index("Latin")
+
+>>> latin_index = languages.index("Latin")
+>>> print(dates[latin_index])
+-700
+>>> gothic_index = languages.index("Gothic")
+>>> print(dates[gothic_index])
+350
