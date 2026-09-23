@@ -1,0 +1,20 @@
+novels = ["Sense and Sensibility", "Pride and Prejudice", "Mansfield Park", "Emma", "Northanger Abbey", "Persuasion", "Lady Susan"]
+print(novels)
+
+novels[1] = "Pride & Prejudice"
+
+pub_year = [1811, 1813, 1814, 1815, 1818, 1818, 1871]
+susan_index = novels.index("Lady Susan")
+pub_year[susan_index] = 1871
+
+year_index = pub_year.index(1814)
+novels[year_index] = "Mansfield Park"
+
+pride_index = novels.index("Pride & Prejudice")
+pub_year[pride_index] = 1813
+
+year_index = pub_year.index(1814)
+novels[year_index] = "Mansfield Park"
+
+year_index = pub_year.index(1818)
+novels[year_index] = "Persuasion"
