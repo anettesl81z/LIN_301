@@ -1,0 +1,42 @@
+list of the Brontë sisters
+sisters = ["Charlotte", "Emily", "Anne", "Charlotte", "Emily", "Charlotte"]
+
+a set: no duplicates, no order
+unique_sisters = set(sisters)
+print(unique_sisters)
+# {'Charlotte', 'Emily', 'Anne'}  -- order not guaranteed!
+
+sets in action
+unique_sisters.add("Branwell")
+"Emily" in unique_sisters       # fast membership check
+
+set math using vocab from novels  # can be used to compare vocabularies of different languages
+jane_eyre_vocab = {"orphan", "governess", "moor", "fire", "love"}
+wuthering_heights_vocab = {"moor", "ghost", "revenge", "love", "storm"}
+
+jane_eyre_vocab | wuthering_heights_vocab   # union: either novel
+jane_eyre_vocab & wuthering_heights_vocab   # intersection: both novels
+jane_eyre_vocab - wuthering_heights_vocab   # difference: only Jane Eyre
+
+
+Types vs. Tokens
+
+tokens is any/all words in a text, they can be basic words that are used in regular/normal everyday language/speech while types are more abstract and unique words 
+A key linguistic distinction: how many words total (tokens) vs. how many different words (types)?
+words = ["the", "cat", "sat", "on", "the", "mat", "the", "cat"]
+tokens = len(words)          # 8
+types = len(set(words))      # 5
+
+This is one of the most common ways we’ll use sets in this course: turning a list into a set just to count how many different things are in it.
+
+
+
+Activity 1
+Below are the opening lines of two novels, already broken into word lists for you (no .split() necessary!) Copy both into your qmd or py file:
+austen_opening = ["it", "is", "a", "truth", "universally", "acknowledged", "that", "a",
+                   "single", "man", "in", "possession", "of", "a", "good", "fortune",
+                   "must", "be", "in", "want", "of", "a", "wife"]
+
+bronte_opening = ["there", "was", "no", "possibility", "of", "taking", "a", "walk",
+                   "that", "day", "we", "had", "been", "wandering", "in", "the",
+                   "leafless", "shrubbery", "an", "hour", "in", "the", "morning"]
