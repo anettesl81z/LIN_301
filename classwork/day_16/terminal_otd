@@ -1,0 +1,131 @@
+>>> try:
+...     print(my_age)
+... except NameError:
+...         print("That variable doesn't exist!")
+...         
+That variable doesn't exist!
+
+
+
+
+
+
+=================== **in-class activity** ===========================
+
+>>> charlotte = ['The Professor', 'Jane Eyre', 'Shirley', 'Villette']
+>>> for title in charlotte:
+...     print(title)
+...     
+The Professor
+Jane Eyre
+Shirley
+Villette
+>>> for book in charlotte:
+...     print(book)
+...     
+The Professor
+Jane Eyre
+Shirley
+Villette
+>>> charlotte = ['The Professor', 'Jane Eyre', 'Shirley', 'Villette']
+... for title in charlotte: 
+...     print(title)
+... print(title)
+... 
+The Professor
+Jane Eyre
+Shirley
+Villette
+Villette
+>>> words = ["phoneme", "phrase", "morpheme", "reconstruction", "index"]
+>>> for lenght in words:
+...     print(word)
+...     print(len())
+... print("The word" (word) "has" len() "letters.")
+... 
+  File "<python-input-25>", line 4
+    print("The word" (word) "has" len() "letters.")
+                      ^^^^
+SyntaxError: invalid syntax. Is this intended to be part of the string?
+>>> for lenght in words:
+...     print(word)
+...     print(len())
+...     
+Traceback (most recent call last):
+  File "<python-input-26>", line 2, in <module>
+    print(word)
+          ^^^^
+NameError: name 'word' is not defined. Did you mean: 'words'?
+>>> for lenght in words:
+...     print(words)
+...     print(len())
+...     
+['phoneme', 'phrase', 'morpheme', 'reconstruction', 'index']
+Traceback (most recent call last):
+  File "<python-input-27>", line 3, in <module>
+    print(len())
+          ~~~^^
+TypeError: len() takes exactly one argument (0 given)
+>>> for lenght in words:
+...     print(words)
+...     len()
+...     
+['phoneme', 'phrase', 'morpheme', 'reconstruction', 'index']
+Traceback (most recent call last):
+  File "<python-input-28>", line 3, in <module>
+    len()
+    ~~~^^
+TypeError: len() takes exactly one argument (0 given)
+>>> for word in words:
+...     print(word)
+...     
+phoneme
+phrase
+morpheme
+reconstruction
+index
+>>> for word in words:
+...     print(word len)
+...     
+...     
+  File "<python-input-30>", line 2
+    print(word len)
+          ^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> for word in words:
+...     print(len(word))
+...     
+7
+6
+8
+14
+5
+>>> for word in words:
+...     print(word)
+...     print(len(word))
+...     
+phoneme
+7
+phrase
+6
+morpheme
+8
+reconstruction
+14
+index
+5
+>>> for word in words:
+...     print("The word", word, "has", len(word), letters.")
+...     
+  File "<python-input-33>", line 2
+    print("The word", word, "has", len(word), letters.")
+                                                      ^
+SyntaxError: unterminated string literal (detected at line 2)
+>>> for word in words:
+...     print("The word", word, "has", len(word), "letters.")
+...     
+The word phoneme has 7 letters.
+The word phrase has 6 letters.
+The word morpheme has 8 letters.
+The word reconstruction has 14 letters.
+The word index has 5 letters.

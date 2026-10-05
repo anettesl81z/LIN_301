@@ -94,7 +94,6 @@ wc -w holmes.txt
 
 107558 holmes.txt
 
-
 10. Searching for the word "Watson" in the text:
 
 ``` bash
@@ -107,8 +106,6 @@ grep "Watson" holmes.txt
 grep "Watson" holmes.txt | wc -l
 ```
 
-
-
 11. Searching for the word "Holmes" in the text:
 
 ``` bash
@@ -120,31 +117,29 @@ grep "Holmes" holmes.txt | wc -l
   Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Watson Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Watson Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Watson Holmes Watson Watson Watson Watson Watson Holmes Holmes Holmes Holmes Watson Watson Watson Watson Holmes Holmes Watson Watson Watson Holmes Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Watson Holmes Holmes Holmes Holmes Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Watson Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Holmes Holmes Holmes Watson Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Watson Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes Holmes Holmes Holmes Holmes Watson Holmes Watson Holmes Holmes Holmes Holmes Holmes Holmes Watson Holmes
 
 - Count only `bash  grep -Ec "(Holmes|Watson)" holmes.txt`
- 
-    533
+
+  533
 
 - Holmes appears in 460 lines of the text while Watson appears in 81 lines of the text.
-
 
 # Part 3 - Regex Challenges
 
 1.  Every instance where a word begins with "Holmes" or "Watson":
 
+2.  All five-letter words in the text: `bash  grep -Eo "\<[a-zA-Z]{5}\>" holmes.txt # added |less to view and copy the shorter output`
 
-2.  All five-letter words in the text: `bash  grep -Eo "\<[a-zA-Z]{5}\>" holmes.txt # added |less to view and copy the shorter output` 
-    
     eBook eBook other parts world under terms eBook check where using eBook Title Conan Doyle March eBook Other START EBOOK Conan Doyle Thumb Noble Beryl woman heard under
 
 - Count only: `bash   grep -Ec "\<[a-zA-Z]{5}\>" holmes.txt`
-    
-    6637
 
-3.  All lines that end in a question mark: `bash  grep -Ec "\?$" holmes.txt` 
-    
+  6637
+
+3.  All lines that end in a question mark: `bash  grep -Ec "\?$" holmes.txt`
+
     0
 
-4.  All instances of a letter repeated twice in a row: `bash grep -Eo "([A-Za-z])\1" holmes.txt | less` 
-    
+4.  All instances of a letter repeated twice in a row: `bash grep -Eo "([A-Za-z])\1" holmes.txt | less`
+
     oo oo oo ww ll oo oo ww oo ee OO II II ll II II ee II pp ee ll rr ee ss ee ll ll ee
 
 - Count only:
@@ -155,8 +150,8 @@ grep "Holmes" holmes.txt | wc -l
 
   6898
 
-5.  Number of times "he", "He", "she", or "She" appears in the text: `bash  grep -Ec "\<([Hh]e|[Ss]he)\>" holmes.txt` 
-    
+5.  Number of times "he", "He", "she", or "She" appears in the text: `bash  grep -Ec "\<([Hh]e|[Ss]he)\>" holmes.txt`
+
     1697
 
 # Part 4 - Reflection
