@@ -1,0 +1,25 @@
+# Part 1 - Numbers, Strings, and Booleans
+
+## Numbers
+
+1.  Variables
+
+\::: `{.python .cell one per line="" style="color: purple"} books = 24 war_years = 10  journey_years = 10` \:::
+
+2.  Variables
+
+\::: `{.python .cell one per line="" style="color: purple"} total_years_away = war_years + journey_years print(total_years_away)` \:::
+
+3.  Reading plan
+
+\::: `{.python .cell one per line="" style="color: purple"} books_per_week = 24//7 print(books_per_week) leftover_books = 24 % 7 print(leftover_books)` \:::
+
+This reading plan shows that I would read 3 books per week and have 3 books left over.
+
+1.  Type of books
+
+\::: `{.python .cell one per line="" style="color: purple"} print(type(books)) print(type(total_years_away)) print(type(books_per_week))` \:::
+
+## Strings
+
+No, they
