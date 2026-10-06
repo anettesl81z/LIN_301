@@ -4,22 +4,275 @@
 
 1.  Variables
 
-\::: `{.python .cell one per line="" style="color: purple"} books = 24 war_years = 10  journey_years = 10` \:::
+::: {#c43af5f0 .cell execution_count="1"}
+``` {.python .cell-code}
+books = 24
+war_years = 10
+journey_years = 10
+```
+:::
 
 2.  Variables
 
-\::: `{.python .cell one per line="" style="color: purple"} total_years_away = war_years + journey_years print(total_years_away)` \:::
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+total_years_away = war_years + journey_years
+print(total_years_away)
+```
+:::
 
 3.  Reading plan
 
-\::: `{.python .cell one per line="" style="color: purple"} books_per_week = 24//7 print(books_per_week) leftover_books = 24 % 7 print(leftover_books)` \:::
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+books_per_week = 24//7
+print(books_per_week)
+
+leftover_books = 24 % 7
+print(leftover_books)
+```
+:::
 
 This reading plan shows that I would read 3 books per week and have 3 books left over.
 
-1.  Type of books
+4.  Types of numbers
 
-\::: `{.python .cell one per line="" style="color: purple"} print(type(books)) print(type(total_years_away)) print(type(books_per_week))` \:::
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+print(type(books))
+print(type(total_years_away))
+print(type(books_per_week))
+```
+:::
+
+No, floor division rounds up the number, so the results are all integers. If I would've used standard division, then the result would've been a decimal (float).
 
 ## Strings
 
-No, they
+5.  Variables
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+hero = "Odysseus"
+epithet = "the cunning king of Ithaca"
+```
+:::
+
+6.  String
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+print(hero + " " + epithet)
+print(hero, epithet)
+```
+:::
+
+With the first print method, I need to add a space between the two strings, otherwise they would be printed together. With the second print method, I don't need to add a space because it automatically adds one between the two strings.
+
+7.  String
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+homer_quote = "\"the man of twists and turns\""
+print(homer_quote)
+```
+:::
+
+## Booleans
+
+8.  Years match
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+years_match = war_years == journey_years
+print(years_match)
+```
+:::
+
+9.  Random book
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+book_number = 17
+```
+:::
+
+10. First and last book
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+is_first_book = book_number == 1
+is_last_book = book_number == 24
+```
+:::
+
+11. Bookend?
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+is_bookend = is_first_book or is_last_book
+print("Book", book_number, "is a bookend?", is_bookend)
+```
+:::
+
+## Book Profile
+
+12. Variables
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+book_number = 20
+my_guess = "Odysseus prepares for battle"
+is_double_digit = book_number >= 10
+```
+:::
+
+13. Print and type
+
+::: {.cell execution_count="1"}
+``` {.python .cell-code}
+print(book_number)
+print(my_guess)
+print(is_double_digit)
+
+print(type(book_number))
+print(type(my_guess))
+print(type(is_double_digit))
+```
+:::
+
+# Part 2 - Lists, Dictionaries, and Sets: Cataloguing the *Odyssey*
+
+## Lists
+
+14. Tokens in the Odyssey
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+with open("odyssey.txt", encoding="utf-8") as f:
+    text = f.read()
+words = text.split()
+print(len(words))
+```
+:::
+
+15. First 20 words
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+print(words[:20])
+```
+:::
+
+No, the first 20 words are about the project Gutenberg, copyright, and information about the EBook.
+
+16. Actual text
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+print(words[900:1000])
+```
+:::
+Text:
+['it', 'sore.', 'For', 'through', 'the', 'blindness', 'of', 'their', 'own', 'hearts', 'they', 'perished,', 'fools,', 'who', 'devoured', 'the', 'oxen', 'of', 'Helios', 'Hyperion:', 'but', 'the', 'god', 'took', 'from', 'them', 'their', 'day', 'of', 'returning.', 'Of', 'these', 'things,', 'goddess,', 'daughter', 'of', 'Zeus,', 'whencesoever', 'thou', 'hast', 'heard', 'thereof,', 'declare', 'thou', 'even', 'unto', 'us.', 'Now', 'all', 'the', 'rest,', 'as', 'many', 'as', 'fled', 'from', 'sheer', 'destruction,', 'were', 'at', 'home,', 'and', 'had', 'escaped', 'both', 'war', 'and', 'sea,', 'but', 'Odysseus', 'only,', 'craving', 'for', 'his', 'wife', 'and', 'for', 'his', 'homeward', 'path,', 'the', 'lady', 'nymph', 'Calypso', 'held,', 'that', 'fair', 'goddess,', 'in', 'her', 'hollow', 'caves,', 'longing', 'to', 'have', 'him', 'for', 'her', 'lord.', 'But']
+
+## Sets
+
+17. Unique words
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+unique_words = set(words)
+print(len(unique_words))
+```
+:::
+
+18. Type to token ratio
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+ttr_ratio = len(unique_words) / len(words)
+print(ttr_ratio)
+```
+:::
+
+19. The lines analyzed during class had high ratios because they were shorter and had less repetition of words. The Odyssey is a whole book, so the repetition is greater, and it results in a lower type-token ratio. I think that this happens because function words, like conjuntions and prepositions, will repeat more as the text gets longer.
+
+## Dictionaries
+
+20. Odysseus occurrences
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+odysseus_count = text.count("Odysseus")
+print(odysseus_count)
+```
+:::
+
+21. Odysseus line
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+position = text.find("Odysseus")
+print(text[position - 150 : position + 150])
+```
+:::
+
+It happens in the middle of the text.
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+print("Ulysses in text?", "Ulysses" in text)
+ulysses_count = text.count("Ulysses")
+print(ulysses_count)
+position = text.find("Ulysses")
+print(text[position - 150 : position + 150])
+```
+:::
+
+22. Building the dictionary
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+character_counts = character_dict = {
+    "Ulysses": text.count("Ulysses"),
+    "Penelope": text.count("Penelope"),
+    "Telemachus": text.count("Telemachus"),
+    "Minerva": text.count("Minerva"),
+}
+```
+:::
+
+23. Character dictionary
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+print(character_counts)
+```
+:::
+
+24. Confirming counts
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+print(character_dict["Ulysses"])
+print(character_dict["Penelope"])
+print(character_dict["Telemachus"])
+print(character_dict["Minerva"])
+```
+:::
+
+Ulysses is the most mentioned character.
+
+25. Adding a key-value pair
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+character_dict["Athena"] = text.count("Athena")
+print(character_dict)
+```
+:::
+
+# Part 3 - Reflection
+
+The thing that surprised me about working with a full text was the type-token ratio because of how much it differed compared to the lists we analyzed in class. Slicing the full text to find the actual lines of text that contained the actual poem. I don't think that leaving the Gutenberg project information in the text significantly affected the type-token ratio because it was a small part of the text, and it was only at the beginning. For part 2 of the assignment, I think that the most natural structure to use was a dictionary because it uses key-value pairs, which is perfect for counting the number of times a character is mentioned in the text. The other options would not have been as effective because lists work better for ordered data, and sets are better for unique values, but they don't have a way to store counts.

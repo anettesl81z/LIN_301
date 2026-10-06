@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -60,25 +95,229 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Variables</li>
 </ol>
-<p>::: <code>{.python .cell one per line="" style="color: purple"} books = 24 war_years = 10  journey_years = 10</code> :::</p>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>books <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>war_years <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>journey_years <span class="op">=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ol start="2" type="1">
 <li>Variables</li>
 </ol>
-<p>::: <code>{.python .cell one per line="" style="color: purple"} total_years_away = war_years + journey_years print(total_years_away)</code> :::</p>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>total_years_away <span class="op">=</span> war_years <span class="op">+</span> journey_years</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total_years_away)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <ol start="3" type="1">
 <li>Reading plan</li>
 </ol>
-<p>::: <code>{.python .cell one per line="" style="color: purple"} books_per_week = 24//7 print(books_per_week) leftover_books = 24 % 7 print(leftover_books)</code> :::</p>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>books_per_week <span class="op">=</span> <span class="dv">24</span><span class="op">//</span><span class="dv">7</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(books_per_week)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>leftover_books <span class="op">=</span> <span class="dv">24</span> <span class="op">%</span> <span class="dv">7</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(leftover_books)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>This reading plan shows that I would read 3 books per week and have 3 books left over.</p>
-<ol type="1">
-<li>Type of books</li>
+<ol start="4" type="1">
+<li>Types of numbers</li>
 </ol>
-<p>::: <code>{.python .cell one per line="" style="color: purple"} print(type(books)) print(type(total_years_away)) print(type(books_per_week))</code> :::</p>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(books))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(total_years_away))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(books_per_week))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>No, floor division rounds up the number, so the results are all integers. If I would’ve used standard division, then the result would’ve been a decimal (float).</p>
 </section>
 <section id="strings" class="level2">
 <h2 class="anchored" data-anchor-id="strings">Strings</h2>
-<p>No, they</p>
+<ol start="5" type="1">
+<li>Variables</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hero <span class="op">=</span> <span class="st">"Odysseus"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>epithet <span class="op">=</span> <span class="st">"the cunning king of Ithaca"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="6" type="1">
+<li>String</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hero <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> epithet)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hero, epithet)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>With the first print method, I need to add a space between the two strings, otherwise they would be printed together. With the second print method, I don’t need to add a space because it automatically adds one between the two strings.</p>
+<ol start="7" type="1">
+<li>String</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>homer_quote <span class="op">=</span> <span class="st">"</span><span class="ch">\"</span><span class="st">the man of twists and turns</span><span class="ch">\"</span><span class="st">"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(homer_quote)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
+<section id="booleans" class="level2">
+<h2 class="anchored" data-anchor-id="booleans">Booleans</h2>
+<ol start="8" type="1">
+<li>Years match</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>years_match <span class="op">=</span> war_years <span class="op">==</span> journey_years</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(years_match)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="9" type="1">
+<li>Random book</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>book_number <span class="op">=</span> <span class="dv">17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="10" type="1">
+<li>First and last book</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>is_first_book <span class="op">=</span> book_number <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>is_last_book <span class="op">=</span> book_number <span class="op">==</span> <span class="dv">24</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="11" type="1">
+<li>Bookend?</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>is_bookend <span class="op">=</span> is_first_book <span class="kw">or</span> is_last_book</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Book"</span>, book_number, <span class="st">"is a bookend?"</span>, is_bookend)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="book-profile" class="level2">
+<h2 class="anchored" data-anchor-id="book-profile">Book Profile</h2>
+<ol start="12" type="1">
+<li>Variables</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>book_number <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>my_guess <span class="op">=</span> <span class="st">"Odysseus prepares for battle"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>is_double_digit <span class="op">=</span> book_number <span class="op">&gt;=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="13" type="1">
+<li>Print and type</li>
+</ol>
+<div class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book_number)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_guess)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_double_digit)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(book_number))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_guess))</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(is_double_digit))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="part-2---lists-dictionaries-and-sets-cataloguing-the-odyssey" class="level1">
+<h1>Part 2 - Lists, Dictionaries, and Sets: Cataloguing the <em>Odyssey</em></h1>
+<section id="lists" class="level2">
+<h2 class="anchored" data-anchor-id="lists">Lists</h2>
+<ol start="14" type="1">
+<li>Tokens in the Odyssey</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"odyssey.txt"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> f.read()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> text.split()</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(words))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="15" type="1">
+<li>First 20 words</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(words[:<span class="dv">20</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>No, the first 20 words are about the project Gutenberg, copyright, and information about the EBook.</p>
+<ol start="16" type="1">
+<li>Actual text</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(words[<span class="dv">900</span>:<span class="dv">1000</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Text: [‘it’, ‘sore.’, ‘For’, ‘through’, ‘the’, ‘blindness’, ‘of’, ‘their’, ‘own’, ‘hearts’, ‘they’, ‘perished,’, ‘fools,’, ‘who’, ‘devoured’, ‘the’, ‘oxen’, ‘of’, ‘Helios’, ‘Hyperion:’, ‘but’, ‘the’, ‘god’, ‘took’, ‘from’, ‘them’, ‘their’, ‘day’, ‘of’, ‘returning.’, ‘Of’, ‘these’, ‘things,’, ‘goddess,’, ‘daughter’, ‘of’, ‘Zeus,’, ‘whencesoever’, ‘thou’, ‘hast’, ‘heard’, ‘thereof,’, ‘declare’, ‘thou’, ‘even’, ‘unto’, ‘us.’, ‘Now’, ‘all’, ‘the’, ‘rest,’, ‘as’, ‘many’, ‘as’, ‘fled’, ‘from’, ‘sheer’, ‘destruction,’, ‘were’, ‘at’, ‘home,’, ‘and’, ‘had’, ‘escaped’, ‘both’, ‘war’, ‘and’, ‘sea,’, ‘but’, ‘Odysseus’, ‘only,’, ‘craving’, ‘for’, ‘his’, ‘wife’, ‘and’, ‘for’, ‘his’, ‘homeward’, ‘path,’, ‘the’, ‘lady’, ‘nymph’, ‘Calypso’, ‘held,’, ‘that’, ‘fair’, ‘goddess,’, ‘in’, ‘her’, ‘hollow’, ‘caves,’, ‘longing’, ‘to’, ‘have’, ‘him’, ‘for’, ‘her’, ‘lord.’, ‘But’]</p>
+</section>
+<section id="sets" class="level2">
+<h2 class="anchored" data-anchor-id="sets">Sets</h2>
+<ol start="17" type="1">
+<li>Unique words</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>unique_words <span class="op">=</span> <span class="bu">set</span>(words)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(unique_words))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="18" type="1">
+<li>Type to token ratio</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ttr_ratio <span class="op">=</span> <span class="bu">len</span>(unique_words) <span class="op">/</span> <span class="bu">len</span>(words)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ttr_ratio)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="19" type="1">
+<li>The lines analyzed during class had high ratios because they were shorter and had less repetition of words. The Odyssey is a whole book, so the repetition is greater, and it results in a lower type-token ratio. I think that this happens because function words, like conjuntions and prepositions, will repeat more as the text gets longer.</li>
+</ol>
+</section>
+<section id="dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
+<ol start="20" type="1">
+<li>Odysseus occurrences</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>odysseus_count <span class="op">=</span> text.count(<span class="st">"Odysseus"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(odysseus_count)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="21" type="1">
+<li>Odysseus line</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>position <span class="op">=</span> text.find(<span class="st">"Odysseus"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text[position <span class="op">-</span> <span class="dv">150</span> : position <span class="op">+</span> <span class="dv">150</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>It happens in the middle of the text.</p>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ulysses in text?"</span>, <span class="st">"Ulysses"</span> <span class="kw">in</span> text)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ulysses_count <span class="op">=</span> text.count(<span class="st">"Ulysses"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ulysses_count)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>position <span class="op">=</span> text.find(<span class="st">"Ulysses"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text[position <span class="op">-</span> <span class="dv">150</span> : position <span class="op">+</span> <span class="dv">150</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="22" type="1">
+<li>Building the dictionary</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>character_counts <span class="op">=</span> character_dict <span class="op">=</span> {</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ulysses"</span>: text.count(<span class="st">"Ulysses"</span>),</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Penelope"</span>: text.count(<span class="st">"Penelope"</span>),</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Telemachus"</span>: text.count(<span class="st">"Telemachus"</span>),</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Minerva"</span>: text.count(<span class="st">"Minerva"</span>),</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="23" type="1">
+<li>Character dictionary</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(character_counts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="24" type="1">
+<li>Confirming counts</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(character_dict[<span class="st">"Ulysses"</span>])</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(character_dict[<span class="st">"Penelope"</span>])</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(character_dict[<span class="st">"Telemachus"</span>])</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(character_dict[<span class="st">"Minerva"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Ulysses is the most mentioned character.</p>
+<ol start="25" type="1">
+<li>Adding a key-value pair</li>
+</ol>
+<div id="c43af5f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>character_dict[<span class="st">"Athena"</span>] <span class="op">=</span> text.count(<span class="st">"Athena"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(character_dict)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="part-3---reflection" class="level1">
+<h1>Part 3 - Reflection</h1>
+<p>The thing that surprised me about working with a full text was the type-token ratio because of how much it differed compared to the lists we analyzed in class. Slicing the full text to find the actual lines of text that contained the actual poem. I don’t think that leaving the Gutenberg project information in the text significantly affected the type-token ratio because it was a small part of the text, and it was only at the beginning. For part 2 of the assignment, I think that the most natural structure to use was a dictionary because it uses key-value pairs, which is perfect for counting the number of times a character is mentioned in the text. The other options would not have been as effective because lists work better for ordered data, and sets are better for unique values, but they don’t have a way to store counts.</p>
 </section>
 
 </main>

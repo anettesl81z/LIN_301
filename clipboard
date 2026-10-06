@@ -1,0 +1,8 @@
+python code block in .qmd files
+
+
+::: {#c43af5f0 .cell execution_count=1}
+``` {.python .cell-code}
+print()
+```
+:::
